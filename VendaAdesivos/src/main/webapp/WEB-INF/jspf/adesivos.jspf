@@ -1,0 +1,40 @@
+<%@page import="java.util.Collections"%>
+<%@page import="br.com.lojaadesivo.entidades.Adesivos"%>
+<%@page import="java.util.List"%>
+<%@page import="br.com.lojaadesivo.dao.AdesivoDao"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page pageEncoding="UTF-8" %>
+<section class="middle">
+    <div class="middle-content clearfix container" role="main">
+        <div class="migalha">
+            <a href="index.jsp">Início</a>
+            <i class="icon-arrow-right2"></i> 
+            <span>> Adesivos</span>
+        </div>
+        <noscript>
+        &lt;div class="alert"&gt;&lt;b&gt;ATENÇÃO:&lt;/b&gt; O javascript do seu navegador está desabilitado. &lt;br&gt; Para uma melhor experiência em nosso site, &lt;b&gt;habilite o javascript ou acesse de outro navegador.&lt;/b&gt;&lt;/div&gt;
+        </noscript>
+
+        <nav id="navigation" class="nav-stacked text-center" role="navigation">
+            <ul id="main-nav" class="nav nav-pills ">
+                <%
+                    AdesivoDao adesivos1 = new AdesivoDao();
+                    List<Adesivos> adesivo1 = adesivos1.listarTodos();
+                    for (Adesivos a : adesivo1) {
+                        out.print("<form action='ServletCarrinho?' method='get' class='panel panel-default col-lg-3'> ");
+                        out.print("<li id='menu-item-2'>");                        
+                        out.print("<img height='234' width='234' class='lazy' src='"+a.getImagem()+"' style='display: inline;'>");
+                        out.print("<br>");
+                        out.print("<input name='id' style='visibility: visible; display:none' value='"+a.getId()+"'>");
+                        out.print("<input name='nome' style='visibility: visible; display:none' value='"+a.getNome()+"'>");
+                        out.print("<input name='preco' style='visibility: visible; display:none' value='"+a.getPreco()+"'>");                        
+                        out.print("Descrição: <strong>"+a.getNome()+"</strong> <br>");
+                        out.print("Preço R$: <strong>"+a.getPreco()+"</strong>  <br>");                        
+                        out.print("<button type='submit' id='adesivo' title='Adicionar ao carrinho' class='btn btn-success'><span class='aluisio-add_shopping_cart'></span></button>");
+                        out.print("</form>");      
+                    }
+                %>
+            </ul>
+        </nav>
+    </div>
+</section>

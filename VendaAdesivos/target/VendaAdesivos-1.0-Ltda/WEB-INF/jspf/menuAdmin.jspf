@@ -1,0 +1,17 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page pageEncoding="UTF-8" %>
+<nav id="navigation" class="nav-stacked text-center" role="navigation">
+    Usuário: ${cliente.email} 
+    <ul id="main-nav" class="nav nav-pills ">
+        <li id="menu-item-2" class="">
+            <a href="manterProduto.jsp"><span class='aluisio-home'></span>
+                MANTER PRODUTOS
+            </a>
+        </li> 
+        <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">
+            <a href="manterCategoria.jsp"><span class='aluisio-person_outline'></span>
+                MANTER CATEGORIAS
+            </a>
+        </li>        
+    </ul>
+</nav>

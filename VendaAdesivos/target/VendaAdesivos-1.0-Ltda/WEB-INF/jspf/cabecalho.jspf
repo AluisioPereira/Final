@@ -1,0 +1,15 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="label-info">
+    <nav id="navigation" class="nav-stacked text-center panel-success" role="navigation">
+        <ul id="main-nav" class="nav nav-pills">
+            <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17">
+                <a href="castrar.jsp">
+                    <span class='aluisio-person_outline'></span>
+                    ACESSE ou CADASTRE-SE
+                    <img src="acessor/img/logo/logo.png" >
+                </a>
+            </li> 
+        </ul>
+    </nav> 
+</div>

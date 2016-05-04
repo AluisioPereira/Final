@@ -1,0 +1,28 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page pageEncoding="UTF-8" %>
+<nav id="navigation" class="nav-stacked text-center" role="navigation">
+    <ul id="main-nav" class="nav nav-pills ">
+        <li id="menu-item-2" class="">
+            <a href="index.jsp"><span class='aluisio-home'></span>
+                LOJA
+            </a>
+        </li> 
+        <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">
+            <a href="LoginCadastrar.jsp"><span class='aluisio-person_outline'></span>
+                ACESSE ou CADASTRE-SE
+            </a>
+        </li>
+        <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item menu-item-19">
+            <a href="carrinho.jsp"><span class='aluisio-shopping_cart'></span>
+                CARRINHO
+                <span class="amount">
+                    <strong>Total R$: 2,99</strong> 
+
+                </span>
+                <span class="contents">
+                    <strong>Itens: 1 </strong> 
+                </span>
+            </a>
+        </li>
+    </ul>
+</nav>
